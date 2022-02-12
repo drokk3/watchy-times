@@ -138,7 +138,7 @@ void WatchyTimes::drawWeather()
    int8_t temperature = currentWeather.temperature;
    int16_t weatherConditionCode = currentWeather.weatherConditionCode;   
 
-  //weatherConditionCode = 500;
+  //weatherConditionCode = 200;
 
    //Serial.println("WeatherCode" + currentWeather.weatherConditionCode);
 
@@ -164,7 +164,7 @@ void WatchyTimes::drawWeather()
    }
    else if(weatherConditionCode == 800 ) //Clear
    {
-      drawBitmapCol( articleImage_x1, articleImage_y1, epd_bitmap_rain,  articleBitmap_w, articleBitmap_h, GxEPD_BLACK);
+      drawBitmapCol( articleImage_x1, articleImage_y1, epd_bitmap_sunny,  articleBitmap_w, articleBitmap_h, GxEPD_BLACK);
       display.print("NICE"); 
       display.setCursor(74, 125);
       display.print("AND"); 
@@ -173,8 +173,12 @@ void WatchyTimes::drawWeather()
    }
    else if(weatherConditionCode >= 700 ) //Atmosphere
    {
-      drawBitmapCol( articleImage_x1, articleImage_y1, epd_bitmap_rain,  articleBitmap_w, articleBitmap_h, GxEPD_BLACK);
-      display.print("MOODY ");
+      drawBitmapCol( articleImage_x1, articleImage_y1, epd_bitmap_atmosphere,  articleBitmap_w, articleBitmap_h, GxEPD_BLACK);
+      display.print("LOOK"); 
+      display.setCursor(74, 125);
+      display.print("AT THE"); 
+      display.setCursor(74, 136);
+      display.print("MOOD!");
    }
    else if(weatherConditionCode >= 600 ) //Snow
    {
@@ -206,12 +210,12 @@ void WatchyTimes::drawWeather()
    }
    else if(weatherConditionCode >= 200 ) //Thunderstorm
    {
-      drawBitmapCol( articleImage_x1, articleImage_y1, epd_bitmap_rain,  articleBitmap_w, articleBitmap_h, GxEPD_BLACK);
-      display.print("THUNDER ");
+      drawBitmapCol( articleImage_x1, articleImage_y1, epd_bitmap_thunderstorm,  articleBitmap_w, articleBitmap_h, GxEPD_BLACK);
+      display.print("STORM ");
       display.setCursor(74, 125);
-      display.print("CAT IS"); 
+      display.print("IS"); 
       display.setCursor(74, 136);
-      display.print("BACK");
+      display.print("COMING");
    }else
    {
       drawBitmapCol( articleImage_x1, articleImage_y1, epd_bitmap_rain,  articleBitmap_w, articleBitmap_h, GxEPD_BLACK);
