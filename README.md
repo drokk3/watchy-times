@@ -3,7 +3,7 @@
 ![alt text](screenshot.gif "Screenshot")
 
 Watchface for those who miss reading newspaper 
-now comes a chance to read time and weather on their e-paper watch [Watchy](https://watchy.sqfmi.com/).  
+now comes a chance to read time and weather on their e-paper watch [SQFMI Watchy](https://watchy.sqfmi.com/).  
 
 ## Update 1
 
